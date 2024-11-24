@@ -102,4 +102,20 @@ No Shell Sort, a escolha da sequência de intervalos afeta a eficiência determi
    - Em listas pequenas, as diferenças de desempenho entre as sequências podem ser menos notáveis. O **Shell** ainda pode ser uma boa escolha em casos simples, mas em listas moderadas ou grandes, as sequências **Knuth** e **Hibbard** são superiores.
 
 
+## 6. Merge Sort
+   - Implemente o Merge Sort para ordenar uma lista de números inteiros. Explique o conceito de "dividir para conquistar" usado nesse algoritmo.
+   - Modifique o Merge Sort para ordenar strings em ordem alfabética.
+  
+### Merge Sort: Dividir para Conquistar
+
+O **Merge Sort** é um algoritmo de ordenação baseado no conceito de **"dividir para conquistar"** (Divide and Conquer). O algoritmo divide recursivamente a lista em duas metades, ordena essas metades e depois as combina (ou "merge") de forma ordenada. Este método é eficiente e possui uma complexidade de tempo de \(O(n \log n)\), onde \(n\) é o número de elementos na lista.
+
+### Conceito de "Dividir para Conquistar"
+O processo de **dividir para conquistar** envolve três etapas:
+
+- **Dividir**: O problema é dividido em subproblemas menores. No caso do Merge Sort, a lista é dividida em duas metades até que cada sublista contenha um único elemento.
+- **Conquistar**: Ordena-se as sublistas.
+- **Combinar**: Combina-se as sublistas ordenadas em uma lista ordenada final.
+
+
 
