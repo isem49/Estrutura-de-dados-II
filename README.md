@@ -1,2 +1,2 @@
 # Estrutura-de-dados-II
-Repositório criado para conteúdo de estrutura de dados II 
+Lista de Atividades: Reforço de Estudo para a Prova 02
