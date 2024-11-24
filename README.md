@@ -86,11 +86,12 @@ O Exponential Search é um algoritmo eficiente para encontrar um elemento em uma
 No Shell Sort, a escolha da sequência de intervalos afeta a eficiência determinando quantas comparações e trocas o algoritmo fará. Sequências bem escolhidas, como as de Hibbard ou Sedgewick, reduzem o número de operações e aceleram a ordenação, enquanto sequências ruins tornam o algoritmo mais lento.
 ### Comparação de Desempenho das Sequências de Intervalo:
 
-| **Sequência de Intervalo** | **Descrição**                         | **Complexidade de Tempo** | **Desempenho para Listas Pequenas** | **Desempenho para Listas Grandes** |
-|----------------------------|---------------------------------------|---------------------------|-------------------------------------|------------------------------------|
-| **Shell (Diminui pela metade)** | Simples, usa intervalos \(n/2, n/4, \dots\) | \(O(n^{3/2})\) a \(O(n^2)\) | Moderado                           | Ruim a Moderado                   |
-| **Knuth**                   | Baseado em \(3^k - 1\)                | \(O(n^{3/2})\)             | Bom                                 | Muito bom                         |
-| **Hibbard**                 | Baseado em \(2^k - 1\)                | \(O(n^{3/2})\)             | Muito bom                           | Excelente                         |
+| **Sequência de Intervalo** | **Desempenho para Listas Pequenas** | **Desempenho para Listas Grandes** |
+|----------------------------|-------------------------------------|------------------------------------|
+| **Shell (Diminui pela metade)** | Moderado                           | Ruim a Moderado                   |
+| **Knuth**                   | Bom                                 | Muito bom                         |
+| **Hibbard**                 | Muito bom                           | Excelente                         |
+
 
 ### Impacto da Sequência de Intervalos no Desempenho:
 
