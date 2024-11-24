@@ -29,6 +29,7 @@ A ordenação é essencial porque garante que possamos eliminar metades da lista
 3. Jump Search
    - Desenvolva o algoritmo Jump Search e determine o tamanho ideal do "salto" para uma lista de tamanho 
    - Compare o tempo de execução do Jump Search com o Binary Search em listas de diferentes tamanhos.
+     
   
    | Tamanho da Lista | Jump Search (ms) | Binary Search (ms) | Relação (Jump / Binary) |
    |------------------:|-----------------:|-------------------:|------------------------:|
