@@ -1,5 +1,5 @@
 # Estrutura-de-dados-II
-Lista de Atividades: Reforço de Estudo para a Prova 02
+Lista de Atividades: 
 
 1. Binary Search
    - Implemente o algoritmo Binary Search em uma lista ordenada e encontre o índice de um elemento dado.
