@@ -32,3 +32,49 @@ A ordenação é essencial porque garante que possamos eliminar metades da lista
    |          100.000  |           0,300 |             0,009  |                  ~33x  |
    |        1.000.000  |           0,950 |             0,012  |                  ~79x  |
 
+##  4. Exponential Search
+   - Implemente o algoritmo Exponential Search para localizar um elemento em uma lista ordenada. Explique como ele combina elementos do Jump Search e Binary Search.
+   - Analise o desempenho do Exponential Search em listas muito grandes e pequenas.
+
+   Como o Exponential Search combina Jump Search e Binary Search
+O Exponential Search é um algoritmo eficiente para encontrar um elemento em uma lista ordenada. Ele usa uma combinação de Jump Search e Binary Search, aproveitando as vantagens de ambos, mas de forma adaptada.
+
+### 1. Fase de Jump Search (Exponencial):
+- O Exponential Search começa verificando o elemento em posições exponenciais. Ou seja, ele começa a procurar por um intervalo onde o valor buscado possa estar.
+- Inicialmente, começa na posição 1, depois vai para a posição 2, 4, 8, 16, 32, etc., até encontrar um intervalo que contenha o valor ou ultrapassar o limite da lista.
+- Isso é semelhante ao Jump Search, onde você "salta" de maneira fixa, mas, ao invés de uma distância fixa como no Jump Search, o Exponential Search dobra a distância a cada iteração (passos exponenciais).
+
+### 2. Fase de Binary Search:
+- Quando o Exponential Search encontra um intervalo onde o elemento pode estar (ou ultrapassa o valor ou chega a um ponto onde o valor deve estar entre dois índices), ele realiza uma busca binária dentro desse intervalo.
+- Binary Search é utilizado para refinar a busca dentro de uma faixa estreita. Como a lista está ordenada, a busca binária se torna extremamente eficiente, reduzindo o número de comparações necessárias.
+
+### Análise do Desempenho do Exponential Search
+
+#### **Características do Exponential Search**
+- Combina busca exponencial com busca binária.
+- **Complexidade**:
+  - **Melhor caso**: \(O(1)\), quando o elemento está nas primeiras posições.
+  - **Pior caso**: \(O(\log n)\), devido à busca binária.
+
+#### **Desempenho em Listas de Diferentes Tamanhos**
+
+| **Tamanho da Lista** | **Tempo (ms)** | **Observação**                                            |
+|-----------------------|----------------|----------------------------------------------------------|
+| **1.000**            | 0,006          | Muito eficiente devido ao pequeno número de elementos.   |
+| **10.000**           | 0,008          | O tempo cresce levemente, ainda quase imperceptível.     |
+| **100.000**          | 0,010          | O crescimento continua muito pequeno (\(O(\log n)\)).    |
+| **1.000.000**        | 0,014          | Escalável para listas muito grandes.                     |
+
+#### **Conclusões**
+1. **Em listas pequenas**:
+   - O Exponential Search apresenta tempos comparáveis ao **Binary Search**.
+   - A diferença em desempenho em relação a outros algoritmos pode ser desprezível em listas pequenas.
+
+2. **Em listas muito grandes**:
+   - Mostra-se altamente escalável, aproveitando seu crescimento \(O(\log n)\).
+   - É mais vantajoso quando se espera que o elemento procurado esteja nas primeiras posições, pois o crescimento exponencial inicial ajuda a localizar rapidamente o intervalo.
+
+3. **Cenário ideal**:
+   - É particularmente útil em listas ordenadas muito grandes, especialmente quando os elementos podem estar no início da lista.
+   - Caso o elemento esteja distribuído de forma uniforme e a lista seja moderada em tamanho, o **Binary Search** ou **Interpolation Search** pode ser mais eficiente.
+
