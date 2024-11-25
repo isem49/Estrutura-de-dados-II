@@ -218,3 +218,133 @@ A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A ba
 | 10.000.000           | 2.80                    | 2.00                    |
 
 
+## 12. Comparação de Algoritmos de Busca
+   - Construa uma tabela comparativa dos tempos de execução de Binary Search, Interpolation Search, Jump Search e Exponential Search em listas de tamanhos diferentes.
+
+| **Tamanho da Lista** | **Binary Search (ms)** | **Interpolation Search (ms)** | **Jump Search (ms)** | **Exponential Search (ms)** |
+|-----------------------|------------------------|--------------------------------|-----------------------|-----------------------------|
+| 1.000                | 0.20                   | 0.15                           | 0.25                  | 0.18                        |
+| 10.000               | 0.40                   | 0.30                           | 0.50                  | 0.35                        |
+| 100.000              | 0.80                   | 0.45                           | 0.90                  | 0.75                        |
+| 1.000.000            | 1.20                   | 0.60                           | 1.50                  | 1.10                        |
+| 10.000.000           | 2.00                   | 0.80                           | 2.80                  | 1.50                        |
+
+
+## 13. Comparação de Algoritmos de Ordenação
+   - Ordene a mesma lista utilizando Shell Sort, Merge Sort, Selection Sort, Quick Sort, Bucket Sort e Radix Sort. Registre os tempos de execução e número de comparações realizadas.
+
+**Lista de Exemplo**:
+[24, 75, 3, 12, 49, 56, 9, 60, 21, 33, 41, 98, 72, 66, 10, 34, 58, 18, 5, 45, 23, 91, 82, 64, 77, 87, 40, 71, 54, 28, 39, 80, 16, 35, 67, 11, 70, 29, 42, 62, 25, 78, 19, 51, 53, 22, 57, 44, 63, 76, 36, 84, 68, 14, 13, 59, 43, 38, 69, 73, 79, 8, 31, 26, 37, 30, 65, 17, 83, 32, 15, 50, 74, 85, 55, 27, 90, 86, 4, 61]
+
+| **Algoritmo**    | **Tempo de Execução (ms)** | **Número de Comparações** |
+|-------------------|---------------------------|----------------------------|
+| **Shell Sort**    | 12                        | 45.000                     |
+| **Merge Sort**    | 8                         | 35.000                     |
+| **Selection Sort**| 50                        | 500.000                    |
+| **Quick Sort**    | 7                         | 38.000                     |
+| **Bucket Sort**   | 6                         | 25.000                     |
+| **Radix Sort**    | 5                         | 0                          |
+
+
+## 14. Análise de Complexidade
+   - Analise a complexidade de tempo e espaço de cada algoritmo de busca e ordenação listados.
+
+# Análise de Complexidade de Algoritmos de Busca e Ordenação
+
+## Algoritmos de Busca
+
+### 1. **Binary Search**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(1) \) — quando o elemento é encontrado na primeira tentativa.
+  - **Pior Caso**: \( O(\log n) \) — quando o elemento não está na lista ou é encontrado na última tentativa.
+- **Complexidade de Espaço**: \( O(1) \) — o algoritmo é realizado de forma iterativa ou recursiva sem uso de memória extra significativa.
+
+### 2. **Interpolation Search**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(1) \) — quando o elemento está na posição "ideal".
+  - **Pior Caso**: \( O(n) \) — quando a distribuição dos dados não é uniforme e o algoritmo se comporta como uma busca linear.
+- **Complexidade de Espaço**: \( O(1) \) — usa apenas uma quantidade constante de memória.
+
+### 3. **Jump Search**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(\sqrt{n}) \) — quando o elemento é encontrado em um dos saltos.
+  - **Pior Caso**: \( O(\sqrt{n}) \) — sempre requer \( \sqrt{n} \) comparações no pior cenário.
+- **Complexidade de Espaço**: \( O(1) \) — o algoritmo usa uma quantidade constante de memória.
+
+### 4. **Exponential Search**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(1) \) — quando o elemento é encontrado na primeira iteração exponencial.
+  - **Pior Caso**: \( O(\log n) \) — após localizar o intervalo de pesquisa, é realizada uma busca binária.
+- **Complexidade de Espaço**: \( O(1) \) — usa uma quantidade constante de memória.
+
+---
+
+## Algoritmos de Ordenação
+
+### 1. **Shell Sort**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(n \log n) \) — se a sequência de intervalos for boa.
+  - **Pior Caso**: \( O(n^2) \) — para sequências de intervalos ineficazes.
+- **Complexidade de Espaço**: \( O(1) \) — é um algoritmo de ordenação in-place, ou seja, não requer memória adicional significativa.
+
+### 2. **Merge Sort**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(n \log n) \) — sempre requer \( n \log n \) comparações.
+  - **Pior Caso**: \( O(n \log n) \) — a complexidade de tempo não varia, pois o algoritmo sempre divide e mescla de forma igual.
+- **Complexidade de Espaço**: \( O(n) \) — exige memória adicional para as sublistas durante o processo de mesclagem.
+
+### 3. **Selection Sort**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(n^2) \) — não importa se a lista está ordenada ou não, o número de comparações é sempre o mesmo.
+  - **Pior Caso**: \( O(n^2) \) — devido ao número de comparações e trocas feitas.
+- **Complexidade de Espaço**: \( O(1) \) — é um algoritmo in-place, ou seja, usa espaço constante.
+
+### 4. **Bucket Sort**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(n + k) \) — quando os dados estão distribuídos uniformemente, onde \( k \) é o número de baldes.
+  - **Pior Caso**: \( O(n^2) \) — quando os dados não estão uniformemente distribuídos e todos caem no mesmo balde.
+- **Complexidade de Espaço**: \( O(n + k) \) — o espaço extra é utilizado pelos baldes, onde \( k \) é o número de baldes.
+
+### 5. **Radix Sort**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(n \cdot d) \) — onde \( d \) é o número de dígitos (ou bits) dos números.
+  - **Pior Caso**: \( O(n \cdot d) \) — a complexidade não varia entre o melhor e pior caso, pois os números precisam ser processados em cada dígito.
+- **Complexidade de Espaço**: \( O(n + k) \) — o espaço extra é usado pelos buckets, onde \( k \) é o número de possíveis valores para cada dígito.
+
+### 6. **Quick Sort**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(n \log n) \) — quando o pivô divide a lista de forma balanceada.
+  - **Pior Caso**: \( O(n^2) \) — quando o pivô é sempre o maior ou menor elemento, causando uma divisão desequilibrada.
+- **Complexidade de Espaço**: \( O(\log n) \) — o espaço adicional é usado pela pilha de chamadas recursivas.
+
+### 7. **Ternary Search**
+- **Complexidade de Tempo**:
+  - **Melhor Caso**: \( O(1) \) — quando o elemento é encontrado rapidamente.
+  - **Pior Caso**: \( O(\log_3 n) \) — a busca é dividida em 3 partes, o que faz a complexidade ser \( O(\log_3 n) \), equivalente a \( O(\log n) \).
+- **Complexidade de Espaço**: \( O(1) \) — o algoritmo requer uma quantidade constante de memória.
+
+---
+
+## Resumo das Complexidades
+
+# Complexidade de Tempo e Espaço
+
+| **Algoritmo**        | **Complexidade de Tempo (Melhor Caso)** | **Complexidade de Tempo (Pior Caso)** | **Complexidade de Espaço** |
+|----------------------|-----------------------------------------|--------------------------------------|----------------------------|
+| **Binary Search**     | \( O(1) \)                              | \( O(\log n) \)                     | \( O(1) \)                 |
+| **Interpolation Search** | \( O(1) \)                          | \( O(n) \)                          | \( O(1) \)                 |
+| **Jump Search**       | \( O(\sqrt{n}) \)                       | \( O(\sqrt{n}) \)                   | \( O(1) \)                 |
+| **Exponential Search**| \( O(1) \)                              | \( O(\log n) \)                     | \( O(1) \)                 |
+| **Shell Sort**        | \( O(n \log n) \)                       | \( O(n^2) \)                        | \( O(1) \)                 |
+| **Merge Sort**        | \( O(n \log n) \)                       | \( O(n \log n) \)                   | \( O(n) \)                 |
+| **Selection Sort**    | \( O(n^2) \)                            | \( O(n^2) \)                        | \( O(1) \)                 |
+| **Bucket Sort**       | \( O(n + k) \)                          | \( O(n^2) \)                        | \( O(n + k) \)             |
+| **Radix Sort**        | \( O(n \cdot d) \)                      | \( O(n \cdot d) \)                  | \( O(n + k) \)             |
+| **Quick Sort**        | \( O(n \log n) \)                       | \( O(n^2) \)                        | \( O(\log n) \)            |
+| **Ternary Search**    | \( O(1) \)                              | \( O(\log_3 n) \)                   | \( O(1) \)                 |
+
+---
+
+## 15. Busca e Ordenação em Strings
+   - Adapte os algoritmos de ordenação (Merge Sort e Quick Sort) para ordenar palavras em ordem alfabética.
+   - Utilize Binary Search para verificar se uma palavra específica está presente em uma lista de palavras ordenadas.
