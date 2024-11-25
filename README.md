@@ -358,3 +358,14 @@ A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A ba
 
 ## 17. Busca e Ordenação em Dados Reais
    - Implemente Bucket Sort para ordenar as notas de uma turma de alunos, classificadas entre 0 e 100. Em seguida, utilize o Interpolation Search para encontrar um aluno com uma nota específica.
+
+# Tabela de Ordenação Estável e Instável
+
+| **Algoritmo de Ordenação** | **Estabilidade** | **Explicação**                                                                                             | **Exemplo**                                                                                                        |
+|----------------------------|------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| **Bubble Sort**             | Estável          | Mantém a ordem relativa de elementos iguais. A troca ocorre apenas entre elementos diferentes.             | `[4a, 2, 3, 4b, 1]` → `[4a, 4b, 2, 3, 1]` → `[2, 4a, 4b, 3, 1]` → `[2, 3, 4a, 4b, 1]` (ordem de `4a` e `4b` mantida). |
+| **Merge Sort**              | Estável          | Ao combinar duas sublistas ordenadas, os elementos iguais mantêm a ordem relativa.                        | `[4a, 2, 3, 4b, 1]` → [Ordena as duas metades] → `[2, 3, 4a, 4b, 1]` (ordem de `4a` e `4b` mantida).              |
+| **Insertion Sort**          | Estável          | Durante a inserção, elementos iguais são mantidos na mesma ordem, pois são inseridos no lugar correto.     | `[4a, 2, 3, 4b, 1]` → [Ordena a lista] → `[1, 2, 3, 4a, 4b]` (ordem de `4a` e `4b` mantida).                      |
+| **Radix Sort**              | Estável          | Ordena elementos com base em dígitos, preservando a ordem de elementos iguais.                             | `[4a, 2, 3, 4b, 1]` → [Ordena por dígitos] → `[1, 2, 3, 4a, 4b]` (ordem de `4a` e `4b` mantida).                   |
+| **Quick Sort**              | Instável         | Durante a troca de elementos, a ordem relativa de elementos iguais pode ser alterada.                      | `[4a, 2, 3, 4b, 1]` → `[1, 2, 3, 4b, 4a]` (ordem de `4a` e `4b` alterada).                                        |
+| **Selection Sort**          | Instável         | Durante as trocas, elementos com o mesmo valor podem ter a ordem alterada.                                 | `[4a, 2, 3, 4b, 1]` → `[1, 2, 3, 4b, 4a]` (ordem de `4a` e `4b` alterada).                                        |
