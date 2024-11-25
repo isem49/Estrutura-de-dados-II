@@ -348,3 +348,13 @@ A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A ba
 ## 15. Busca e Ordenação em Strings
    - Adapte os algoritmos de ordenação (Merge Sort e Quick Sort) para ordenar palavras em ordem alfabética.
    - Utilize Binary Search para verificar se uma palavra específica está presente em uma lista de palavras ordenadas.
+
+     (Implementação em código)
+
+## 16. Aplicação Prática de Busca
+   - Use o Binary Search para procurar um livro específico por ISBN em uma lista ordenada de registros de biblioteca.
+
+     (Implementação em código)
+
+## 17. Busca e Ordenação em Dados Reais
+   - Implemente Bucket Sort para ordenar as notas de uma turma de alunos, classificadas entre 0 e 100. Em seguida, utilize o Interpolation Search para encontrar um aluno com uma nota específica.
