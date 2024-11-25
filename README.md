@@ -369,3 +369,9 @@ A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A ba
 | **Radix Sort**              | Estável          | Ordena elementos com base em dígitos, preservando a ordem de elementos iguais.                             | `[4a, 2, 3, 4b, 1]` → [Ordena por dígitos] → `[1, 2, 3, 4a, 4b]` (ordem de `4a` e `4b` mantida).                   |
 | **Quick Sort**              | Instável         | Durante a troca de elementos, a ordem relativa de elementos iguais pode ser alterada.                      | `[4a, 2, 3, 4b, 1]` → `[1, 2, 3, 4b, 4a]` (ordem de `4a` e `4b` alterada).                                        |
 | **Selection Sort**          | Instável         | Durante as trocas, elementos com o mesmo valor podem ter a ordem alterada.                                 | `[4a, 2, 3, 4b, 1]` → `[1, 2, 3, 4b, 4a]` (ordem de `4a` e `4b` alterada).                                        |
+
+## 19. Análise Visual dos Algoritmos  
+   - Crie gráficos para ilustrar como os algoritmos de ordenação (Merge Sort, Quick Sort, Selection Sort) reorganizam os elementos a cada etapa.
+
+## 20. Desafios de Implementação
+   - Crie um programa que permita ao usuário escolher um algoritmo de busca e ordenação para ordenar uma lista ou procurar um elemento, oferecendo comparações automáticas entre os métodos.
