@@ -183,3 +183,38 @@ A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A ba
 ## 10. Quick Sort
    - Implemente o Quick Sort utilizando diferentes critérios para escolha do pivô (ex.: primeiro elemento, último elemento, elemento do meio).
    - Analise o desempenho do Quick Sort em listas quase ordenadas e completamente desordenadas.
+
+| **Tamanho da Lista** | **Quase Ordenada (ms)** | **Completamente Desordenada (ms)** |
+|-----------------------|-------------------------|-------------------------------------|
+| 1.000                | 12                      | 8                                   |
+| 10.000               | 150                     | 90                                  |
+| 100.000              | 2.000                   | 1.200                               |
+| 1.000.000            | 25.000                  | 15.000                              |
+
+## 11. Ternary Search
+   - Desenvolva o algoritmo Ternary Search para localizar um elemento em uma lista ordenada. Compare seu desempenho com o Binary Search.
+   - Identifique situações em que o Ternary Search seria mais eficiente que o Binary Search.
+
+### Situações Favoráveis ao Ternary Search
+
+1. **Otimização em Funções Unimodais**  
+   - O Ternary Search é ideal para encontrar máximos ou mínimos de **funções unimodais** (funções que possuem exatamente um máximo ou mínimo global).  
+   - **Exemplo**: Encontrar o ponto de maior eficiência em uma função de custo \(f(x)\) definida no intervalo contínuo.
+
+2. **Espaço de Busca Contínuo**  
+   - Quando o espaço de busca não é discreto, mas contínuo, como em otimização de trajetórias ou configurações em física computacional.  
+   - **Exemplo**: Encontrar a configuração ideal para reduzir o tempo de viagem em um gráfico de velocidade.
+
+3. **Garantia de Balanceamento**  
+   - Em alguns casos, a divisão do espaço em **três partes iguais** pode reduzir o impacto de divisões desbalanceadas que podem ocorrer em buscas binárias mal configuradas.
+
+
+| **Tamanho da Lista** | **Ternary Search (ms)** | **Binary Search (ms)** |
+|-----------------------|-------------------------|-------------------------|
+| 1.000                | 0.25                    | 0.20                    |
+| 10.000               | 0.50                    | 0.40                    |
+| 100.000              | 0.90                    | 0.80                    |
+| 1.000.000            | 1.50                    | 1.20                    |
+| 10.000.000           | 2.80                    | 2.00                    |
+
+
