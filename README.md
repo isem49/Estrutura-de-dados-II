@@ -117,5 +117,69 @@ O processo de **dividir para conquistar** envolve três etapas:
 - **Conquistar**: Ordena-se as sublistas.
 - **Combinar**: Combina-se as sublistas ordenadas em uma lista ordenada final.
 
+## 7. Selection Sort
+   - Desenvolva o Selection Sort e acompanhe cada iteração mostrando como a lista é organizada passo a passo.
+   - Analise o desempenho do Selection Sort em listas pequenas, médias e grandes.
 
 
+| **Tamanho da Lista**               | **Desempenho**                                     |
+|------------------------------------|---------------------------------------------------|
+| **Listas Pequenas (10-100 elementos)** | Desempenho razoável, mas ainda ineficiente **O(n²)**. |
+| **Listas Médias (100-1000 elementos)** | Desempenho piora à medida que a lista cresce, ainda **O(n²)**. |
+| **Listas Grandes (>1000 elementos)** | Desempenho muito ruim, ineficiente para listas grandes devido ao **O(n²)**. |
+
+
+## 8. Bucket Sort
+   - Implemente o Bucket Sort para ordenar uma lista de números em ponto flutuante no intervalo [0, 1). Explique como os "baldes" são preenchidos e ordenados.
+   - Adapte o Bucket Sort para ordenar números inteiros positivos em intervalos maiores.
+
+     (Implementação em código)
+
+## 9. Radix Sort
+   - Implemente o Radix Sort para ordenar uma lista de números inteiros. Teste-o com números de diferentes tamanhos (ex.: 2 dígitos, 5 dígitos, 10 dígitos).
+   - Explique como o algoritmo lida com bases diferentes (ex.: base 10 e base 2).
+
+### Radix Sort e o Uso de Diferentes Bases
+
+O **Radix Sort** é um algoritmo de ordenação não-comparativo que organiza os elementos com base em seus dígitos ou bits, processando cada posição separadamente. Ele funciona de maneira eficiente ao usar uma estratégia de classificação por contagem (Counting Sort) como sub-rotina, sendo especialmente útil para listas de números inteiros ou strings curtas.
+
+### Como o Algoritmo Lida com Diferentes Bases
+
+A base utilizada no Radix Sort determina como os números são divididos em "dígitos" para serem processados. Cada base influencia a granularidade com que os elementos são ordenados em cada iteração. 
+
+#### **Base 10 (Decimal)**
+- **Funcionamento**: 
+  - Cada número é processado dígito por dígito, começando pela unidade (posição menos significativa - LSD) até o dígito mais significativo (MSD).
+  - O algoritmo utiliza uma lista de 10 "baldes" (de 0 a 9) para separar os números com base no valor do dígito atual.
+- **Exemplo**: Ordenar os números `[329, 457, 657, 839]`:
+  - Primeiro passo: ordenar pelos dígitos das unidades.
+  - Segundo passo: ordenar pelos dígitos das dezenas.
+  - Terceiro passo: ordenar pelos dígitos das centenas.
+- **Impacto no desempenho**:
+  - Mais adequado para números decimais naturais.
+  - Quanto maior o número de dígitos, mais iterações o algoritmo executa.
+
+#### **Base 2 (Binária)**
+- **Funcionamento**: 
+  - Os números são processados bit por bit, usando os valores de 0 e 1 como os "baldes".
+  - É especialmente eficiente para sistemas computacionais, pois os dados já estão representados em binário.
+- **Exemplo**: Ordenar `[4, 2, 7, 1]` (em binário `[100, 010, 111, 001]`):
+  - Primeiro passo: ordenar pelo bit menos significativo (LSD).
+  - Segundo passo: ordenar pelo próximo bit.
+  - Continuar até o bit mais significativo (MSD).
+- **Impacto no desempenho**:
+  - Aumenta o número de iterações, pois cada número requer \( \log_2(n) \) passos, onde \( n \) é o maior número.
+  - No entanto, em hardware especializado ou sistemas binários, a execução é extremamente rápida.
+
+### Comparação Entre Bases
+| **Base** | **Vantagens**                             | **Desvantagens**                          |
+|----------|-------------------------------------------|-------------------------------------------|
+| **Base 10** | Fácil de entender e implementar.         | Pode ser menos eficiente para números grandes. |
+| **Base 2**  | Ideal para sistemas digitais e grandes conjuntos de dados. | Mais passos devido ao processamento bit a bit. |
+
+### Conclusão
+A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A base decimal é geralmente mais intuitiva para números inteiros comuns, enquanto a base binária é mais eficiente em sistemas computacionais, especialmente quando lidando com grandes volumes de dados ou representações binárias naturais.
+
+## 10. Quick Sort
+    - Implemente o Quick Sort utilizando diferentes critérios para escolha do pivô (ex.: primeiro elemento, último elemento, elemento do meio).
+    - Analise o desempenho do Quick Sort em listas quase ordenadas e completamente desordenadas.
