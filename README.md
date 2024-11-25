@@ -181,5 +181,5 @@ A base utilizada no Radix Sort determina como os números são divididos em "dí
 A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A base decimal é geralmente mais intuitiva para números inteiros comuns, enquanto a base binária é mais eficiente em sistemas computacionais, especialmente quando lidando com grandes volumes de dados ou representações binárias naturais.
 
 ## 10. Quick Sort
-    - Implemente o Quick Sort utilizando diferentes critérios para escolha do pivô (ex.: primeiro elemento, último elemento, elemento do meio).
-    - Analise o desempenho do Quick Sort em listas quase ordenadas e completamente desordenadas.
+   - Implemente o Quick Sort utilizando diferentes critérios para escolha do pivô (ex.: primeiro elemento, último elemento, elemento do meio).
+   - Analise o desempenho do Quick Sort em listas quase ordenadas e completamente desordenadas.
