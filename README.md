@@ -359,6 +359,11 @@ A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A ba
 ## 17. Busca e Ordenação em Dados Reais
    - Implemente Bucket Sort para ordenar as notas de uma turma de alunos, classificadas entre 0 e 100. Em seguida, utilize o Interpolation Search para encontrar um aluno com uma nota específica.
 
+     (Implementação em código)
+
+18. Ordenação Estável e Instável
+    - Identifique quais algoritmos de ordenação da lista são estáveis e explique o que isso significa. Demonstre com exemplos.
+
 # Tabela de Ordenação Estável e Instável
 
 | **Algoritmo de Ordenação** | **Estabilidade** | **Explicação**                                                                                             | **Exemplo**                                                                                                        |
