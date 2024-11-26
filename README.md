@@ -350,7 +350,7 @@ A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A ba
 | Algoritmo            | Melhor Caso                | Pior Caso                  | Complexidade de Espaço | Descrição                                                        |
 |----------------------|----------------------------|----------------------------|------------------------|------------------------------------------------------------------|
 | Binary Search        | O(log n)                   | O(log n)                   | O(1)                   | Efetua busca em uma lista ordenada dividindo repetidamente o intervalo de busca pela metade.          |
-| Interpolation Search | O(log log n)               | O(n)                       | O(1)                   | Similar à busca binária, mas calcula a posição provável de um valor buscando reduzir ainda mais o intervalo.   |
+| Interpolation Search | O(log n)               | O(n)                       | O(1)                   | Similar à busca binária, mas calcula a posição provável de um valor buscando reduzir ainda mais o intervalo.   |
 | Jump Search          | O(√n)                      | O(√n)                      | O(1)                   | Divide a lista em blocos de tamanho √n e salta entre esses blocos.                           |
 | Exponential Search   | O(log n)                   | O(log n)                   | O(1)                   | É usada principalmente em listas infinitas ou desconhecidas, começando com pequenos intervalos e dobrando a cada passo. |
 | Ternary Search       | O(log₃ n)                  | O(log₃ n)                  | O(1)                   | Similar à busca binária, mas divide o espaço de busca em três partes.                 |
