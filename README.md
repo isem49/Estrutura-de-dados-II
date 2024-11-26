@@ -347,19 +347,20 @@ A escolha da base no **Radix Sort** depende do contexto e do tipo de dados. A ba
 
 # Complexidade de Tempo e Espaço
 
-| **Algoritmo**        | **Complexidade de Tempo (Melhor Caso)** | **Complexidade de Tempo (Pior Caso)** | **Complexidade de Espaço** |
-|----------------------|-----------------------------------------|--------------------------------------|----------------------------|
-| **Binary Search**     | \( O(1) \)                              | \( O(\log n) \)                     | \( O(1) \)                 |
-| **Interpolation Search** | \( O(1) \)                          | \( O(n) \)                          | \( O(1) \)                 |
-| **Jump Search**       | \( O(\sqrt{n}) \)                       | \( O(\sqrt{n}) \)                   | \( O(1) \)                 |
-| **Exponential Search**| \( O(1) \)                              | \( O(\log n) \)                     | \( O(1) \)                 |
-| **Shell Sort**        | \( O(n \log n) \)                       | \( O(n^2) \)                        | \( O(1) \)                 |
-| **Merge Sort**        | \( O(n \log n) \)                       | \( O(n \log n) \)                   | \( O(n) \)                 |
-| **Selection Sort**    | \( O(n^2) \)                            | \( O(n^2) \)                        | \( O(1) \)                 |
-| **Bucket Sort**       | \( O(n + k) \)                          | \( O(n^2) \)                        | \( O(n + k) \)             |
-| **Radix Sort**        | \( O(n \cdot d) \)                      | \( O(n \cdot d) \)                  | \( O(n + k) \)             |
-| **Quick Sort**        | \( O(n \log n) \)                       | \( O(n^2) \)                        | \( O(\log n) \)            |
-| **Ternary Search**    | \( O(1) \)                              | \( O(\log_3 n) \)                   | \( O(1) \)                 |
+| Algoritmo            | Melhor Caso                | Pior Caso                  | Complexidade de Espaço | Descrição                                                        |
+|----------------------|----------------------------|----------------------------|------------------------|------------------------------------------------------------------|
+| Binary Search        | O(log n)                   | O(log n)                   | O(1)                   | Efetua busca em uma lista ordenada dividindo repetidamente o intervalo de busca pela metade.          |
+| Interpolation Search | O(log log n)               | O(n)                       | O(1)                   | Similar à busca binária, mas calcula a posição provável de um valor buscando reduzir ainda mais o intervalo.   |
+| Jump Search          | O(√n)                      | O(√n)                      | O(1)                   | Divide a lista em blocos de tamanho √n e salta entre esses blocos.                           |
+| Exponential Search   | O(log n)                   | O(log n)                   | O(1)                   | É usada principalmente em listas infinitas ou desconhecidas, começando com pequenos intervalos e dobrando a cada passo. |
+| Ternary Search       | O(log₃ n)                  | O(log₃ n)                  | O(1)                   | Similar à busca binária, mas divide o espaço de busca em três partes.                 |
+| Merge Sort           | O(n log n)                 | O(n log n)                 | O(n)                   | Divide a lista ao meio, ordena cada metade recursivamente e então mescla as metades ordenadas.  |
+| Quick Sort           | O(n log n)                 | O(n²)                      | O(log n) a O(n)        | Escolhe um pivô e particiona a lista em dois sub-arranjos, um com elementos menores e outro com elementos maiores que o pivô. |
+| Selection Sort       | O(n²)                      | O(n²)                      | O(1)                   | Seleciona repetidamente o menor elemento da lista e o coloca na posição correta.                |
+| Bucket Sort          | O(n + k)                   | O(n²)                      | O(n + k)               | Distribui os elementos em vários "baldes" e então ordena cada balde individualmente.             |
+| Radix Sort           | O(nk)                      | O(nk)                      | O(n + k)               | Ordena os números considerando cada dígito individualmente, começando pelo menos significativo.       |
+| Shell Sort           | O(n log n)                 | O(n²)                      | O(1)                   | Um melhoramento do Insertion Sort, que compara elementos distantes e depois diminui a distância entre os elementos comparados. |
+
 
 ---
 
