@@ -133,18 +133,16 @@ O processo de **dividir para conquistar** envolve três etapas:
    - Implemente o Bucket Sort para ordenar uma lista de números em ponto flutuante no intervalo [0, 1). Explique como os "baldes" são preenchidos e ordenados.
    - Adapte o Bucket Sort para ordenar números inteiros positivos em intervalos maiores.
 
-   # Bucket Sort
-
 O **Bucket Sort** é um algoritmo de ordenação que distribui os elementos de uma lista em "baldes", e depois ordena os elementos dentro de cada balde individualmente. É eficiente quando os dados estão uniformemente distribuídos ao longo de um intervalo.
 
-## Passos do Bucket Sort
+### Passos do Bucket Sort
 
 1. **Criação dos Baldes**: Divide os dados em baldes baseados em seu valor, mapeando-os para subintervalos.
 2. **Distribuição dos Elementos**: Cada elemento é colocado no balde correspondente ao seu valor.
 3. **Ordenação dos Baldes**: Cada balde é ordenado individualmente usando um algoritmo simples (como **Insertion Sort**).
 4. **Concatenar os Baldes**: Após a ordenação, os baldes são unidos para formar a lista final ordenada.
 
-## Exemplo
+### Exemplo
 
 Dada a lista: `[0.42, 0.32, 0.13, 0.24, 0.53, 0.51]` e 5 baldes:
 
@@ -153,21 +151,6 @@ Dada a lista: `[0.42, 0.32, 0.13, 0.24, 0.53, 0.51]` e 5 baldes:
 - **Passo 3**: Concatenar os baldes ordenados.
 
 **Resultado final**: `[0.13, 0.24, 0.32, 0.42, 0.51, 0.53]`
-
-## Complexidade
-
-- **Tempo**: Em caso ideal, **O(n + k)**, onde **n** é o número de elementos e **k** o número de baldes.
-- **Espaço**: **O(n + k)**, devido ao espaço para armazenar os baldes.
-
-## Vantagens
-
-- Eficiente para dados uniformemente distribuídos.
-- Boa performance quando os dados estão em intervalos conhecidos.
-
-## Desvantagens
-
-- Menos eficiente em casos de dados desordenados ou mal distribuídos.
-- Exige que os dados estejam em um intervalo conhecido ou mapeável.
 
 
 ## 9. Radix Sort
